@@ -10,13 +10,8 @@
 #define StaticLinkList_h
 
 #include <stdio.h>
+#include "DataStructureUtil.h"
 
-typedef int elemType;
-typedef int Status;
-#define ERROR 0
-#define OK 1
-#define true 1
-#define false 0
 
 #define MAXSIZE 1000
 typedef struct {

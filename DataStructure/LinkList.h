@@ -8,34 +8,26 @@
 #ifndef LinkList_h
 #define LinkList_h
 
-#define OK 1;
-#define ERROR 0;
-#define true 1;
-#define false 0;
+#include <stdlib.h>
+#include "DataStructureUtil.h"
 
-typedef int elemType;
-typedef int Status;
-typedef int Boolean;
 typedef struct Node{
     elemType data;
     struct Node* next;
 } Node;
 typedef Node* LinkList;
 
-#include <stdlib.h>
-
-
-Status InitList(LinkList list);
-Boolean ListEmpty(LinkList list);
-Status ClearList(LinkList list);
-Status GetElem(LinkList list, unsigned int index, elemType* elem);
-unsigned int LocateElem(LinkList list, elemType elem);//一般返回element的时候，声明指针；已知时，声明原变量
-Status ListInsert(LinkList list, unsigned int index, elemType elem);
-Status ListDelete(LinkList list, unsigned int index, elemType* elem);
-unsigned int ListLength(LinkList list);
+Status LL_InitList(LinkList list);
+Boolean LL_ListEmpty(LinkList list);
+Status LL_ClearList(LinkList list);
+Status LL_GetElem(LinkList list, unsigned int index, elemType* elem);
+unsigned int LL_LocateElem(LinkList list, elemType elem);//一般返回element的时候，声明指针；已知时，声明原变量
+Status LL_ListInsert(LinkList list, unsigned int index, elemType elem);
+Status LL_ListDelete(LinkList list, unsigned int index, elemType* elem);
+unsigned int LL_ListLength(LinkList list);
 //
-void CreateListHead(LinkList list, unsigned int num);
-void CreateListTail(LinkList list, unsigned int num);
+void LL_CreateListHead(LinkList list, unsigned int num);
+void LL_CreateListTail(LinkList list, unsigned int num);
 
 
 #endif /* LinkList_h */

@@ -10,7 +10,7 @@
 #include "LinkList.h"
 #include <time.h>
 
-Status InitList(LinkList list){
+Status LL_InitList(LinkList list){
     list = (LinkList)malloc(sizeof(Node));
     if( !list ){
         printf("Out of memory");
@@ -21,7 +21,7 @@ Status InitList(LinkList list){
     return OK;
 };
 
-Boolean ListEmpty(LinkList list){
+Boolean LL_ListEmpty(LinkList list){
     if ( !(list->next) ) {
         return true;
     } else {
@@ -30,7 +30,7 @@ Boolean ListEmpty(LinkList list){
 };
 
 //ok
-Status ClearList(LinkList list){
+Status LL_ClearList(LinkList list){
     LinkList p,q;
     p = list->next;
     while(p){
@@ -47,7 +47,7 @@ Status ClearList(LinkList list){
 };
 
 //ok
-Status GetElem(LinkList list, unsigned int i, elemType* elem){
+Status LL_GetElem(LinkList list, unsigned int i, elemType* elem){
     LinkList p;
     unsigned int j = 1;
     p = list->next;
@@ -65,7 +65,7 @@ Status GetElem(LinkList list, unsigned int i, elemType* elem){
 };
 
 //ok
-Status ListInsert(LinkList list, unsigned int i, elemType elem){
+Status LL_ListInsert(LinkList list, unsigned int i, elemType elem){
     LinkList p;
     p = list;
     unsigned int j = 1;
@@ -86,7 +86,7 @@ Status ListInsert(LinkList list, unsigned int i, elemType elem){
 }
 
 // ok
-Status ListDelete(LinkList list, unsigned int i, elemType* elem){
+Status LL_ListDelete(LinkList list, unsigned int i, elemType* elem){
     LinkList p,q;
     p = list;
     unsigned int j = 1;
@@ -105,7 +105,7 @@ Status ListDelete(LinkList list, unsigned int i, elemType* elem){
     return OK;
 }
 
-unsigned int ListLength(LinkList list){
+unsigned int LL_ListLength(LinkList list){
     LinkList p;
     unsigned int j = 0;
     p = list->next;
@@ -116,7 +116,7 @@ unsigned int ListLength(LinkList list){
     return j;
 }
 
-unsigned int LocateElem(LinkList list, elemType elem){
+unsigned int LL_LocateElem(LinkList list, elemType elem){
     LinkList p;
     unsigned int j = 1;
     p = list->next;
@@ -132,7 +132,7 @@ unsigned int LocateElem(LinkList list, elemType elem){
 }
 
 //ok
-void CreateListHead(LinkList list, unsigned int num){
+void LL_CreateListHead(LinkList list, unsigned int num){
     LinkList p;
     unsigned int i;
     srand((unsigned int)time(0));
@@ -146,7 +146,7 @@ void CreateListHead(LinkList list, unsigned int num){
     }
 }
 //ok
-void CreateListTail(LinkList list, unsigned int num){
+void LL_CreateListTail(LinkList list, unsigned int num){
     LinkList p, q;
     unsigned int i;
     srand((unsigned int)time(0));

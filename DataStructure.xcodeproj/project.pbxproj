@@ -34,6 +34,7 @@
 		593416EB20972E6800B59AFB /* StaticLinkList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StaticLinkList.c; sourceTree = "<group>"; };
 		593416ED209750D600B59AFB /* LinkStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkStack.h; sourceTree = "<group>"; };
 		593416EE209750D600B59AFB /* LinkStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkStack.c; sourceTree = "<group>"; };
+		5985EAB22097E11100B5B986 /* DataStructureUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructureUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 			children = (
 				591EF0062093ED5C00183242 /* main.c */,
 				591EF00D2093F21600183242 /* LinkList.h */,
+				5985EAB22097E11100B5B986 /* DataStructureUtil.h */,
 				591EF00E2093F23100183242 /* LinkList.c */,
 				593416EA20972E6800B59AFB /* StaticLinkList.h */,
 				593416ED209750D600B59AFB /* LinkStack.h */,

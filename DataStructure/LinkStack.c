@@ -29,3 +29,9 @@ Status Pop(LinkStack* stack, elemType* elem){
     free(s);
     return OK;
 }
+
+Boolean StackEmpty(LinkStack stack){
+    if(!(stack.top))
+        return true;
+    return false;
+}
