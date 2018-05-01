@@ -35,3 +35,43 @@ Boolean StackEmpty(LinkStack stack){
         return true;
     return false;
 }
+
+Status InitStack(LinkStack* stack){
+    stack = (LinkStack*)malloc(sizeof(LinkStack));
+    if(!stack)
+        return ERROR;
+    stack->top = NULL;
+    stack->count = 0;
+    return OK;
+}
+
+Status DestoryStack(LinkStack* stack){
+    if(!ClearStack(stack))
+        return ERROR;
+    free(stack);
+    return OK;
+}
+
+Status ClearStack(LinkStack* stack){
+    elemType elem;
+    while(stack->top){
+        Pop(stack, &elem);
+    }
+    return OK;
+}
+
+Status GetTop(LinkStack* stack, elemType elem){
+    LinkStackPtr p;
+    p = stack->top;
+    if(!p){
+        printf("Link Stack is Empty");
+        return ERROR;
+    }
+    elem = p->data;
+    return OK;
+}
+
+unsigned int StackLength(LinkStack stack){
+    return stack.count;
+}
+
