@@ -27,6 +27,7 @@ Status Pop(LinkStack* stack, elemType* elem){
     stack->top = s->next;
     stack->count--;
     free(s);
+    s = NULL;
     return OK;
 }
 
@@ -36,26 +37,29 @@ Boolean StackEmpty(LinkStack stack){
     return false;
 }
 
+/*Assump stack has allocated memory*/
 Status InitStack(LinkStack* stack){
-    stack = (LinkStack*)malloc(sizeof(LinkStack));
-    if(!stack)
-        return ERROR;
     stack->top = NULL;
     stack->count = 0;
     return OK;
 }
 
 Status DestoryStack(LinkStack* stack){
-    if(!ClearStack(stack))
-        return ERROR;
-    free(stack);
-    return OK;
+    // from what i understand, destory means free all the allocated
+    // memory. and clear means top point to NULL, which means the allocated
+    // memory hasn't been freed?(assign to some other varibles?)
+    // I got confused about the aim to have "clear", so I perfer to let them same.
+    return ClearStack(stack);
 }
 
 Status ClearStack(LinkStack* stack){
     elemType elem;
+    Status s;
     while(stack->top){
-        Pop(stack, &elem);
+        s = Pop(stack, &elem);
+        if (!s) {
+            return ERROR;
+        }
     }
     return OK;
 }

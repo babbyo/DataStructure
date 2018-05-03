@@ -31,7 +31,7 @@ Status SLL_ListInsert(StaticLinkList list, unsigned int i, elemType elem){
     j = Malloc_SLL(list);
     if (j){
         list[j].data = elem;
-        for(l = 1; l <= i - 1; ++l)
+        for(l = 1; l < i; ++l)
             k = list[k].cur;
         list[j].cur = list[k].cur;
         list[k].cur = j;
@@ -50,7 +50,7 @@ Status SLL_ListDelete(StaticLinkList list, unsigned int i){
     k = MAXSIZE - 1;
     if ( i < 1 || i > SLL_ListLength(list) + 1)
         return ERROR;
-    for(l = 1; l <= i - 1; ++l)
+    for(l = 1; l < i; ++l)
         k = list[k].cur;
     j = list[k].cur;
     list[k].cur = list[j].cur;
@@ -61,7 +61,7 @@ Status SLL_ListDelete(StaticLinkList list, unsigned int i){
 unsigned int SLL_ListLength(StaticLinkList list){
     unsigned int j, k;
     k = MAXSIZE - 1;
-    for (j = 1; list[k].cur != 0; ++j){
+    for (j = 0; list[k].cur != 0; ++j){
         k = list[k].cur;
     }
     return j;

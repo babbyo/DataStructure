@@ -6,22 +6,23 @@
 //  Copyright © 2018 刘晋辰. All rights reserved.
 //
 // 不能乱free; !p是p为空;
+// 声明指针变量一定要初始化；
 #include <stdio.h>
 #include "LinkList.h"
 #include <time.h>
 
-Status LL_InitList(LinkList list){
-    list = (LinkList)malloc(sizeof(Node));
+Status InitList(LinkList* list){
+    *list = (LinkList)malloc(sizeof(Node));
     if( !list ){
         printf("Out of memory");
         return ERROR;
     }
-    list->next = NULL;
-    list->data = 0;
+    (*list)->next = NULL;
+    (*list)->data = 0;
     return OK;
 };
 
-Boolean LL_ListEmpty(LinkList list){
+Boolean ListEmpty(LinkList list){
     if ( !(list->next) ) {
         return true;
     } else {
@@ -29,25 +30,19 @@ Boolean LL_ListEmpty(LinkList list){
     }
 };
 
-//ok
-Status LL_ClearList(LinkList list){
+Status ClearList(LinkList* list){
     LinkList p,q;
-    p = list->next;
+    p = (*list)->next;
     while(p){
-//        q = p;
-//        p = p->next;
-//        free(q);
         q = p->next;
         free(p);
         p = q;
     }
-    //free(list);
-    list->next = NULL;
+    (*list)->next = NULL;
     return OK;
 };
 
-//ok
-Status LL_GetElem(LinkList list, unsigned int i, elemType* elem){
+Status GetElem(LinkList list, unsigned int i, elemType* elem){
     LinkList p;
     unsigned int j = 1;
     p = list->next;
@@ -60,14 +55,12 @@ Status LL_GetElem(LinkList list, unsigned int i, elemType* elem){
         return ERROR;
     }
     *elem = p->data;
-    //free(p);
     return OK;
 };
 
-//ok
-Status LL_ListInsert(LinkList list, unsigned int i, elemType elem){
+Status ListInsert(LinkList* list, unsigned int i, elemType elem){
     LinkList p;
-    p = list;
+    p = *list;
     unsigned int j = 1;
     while(p && j < i){
         p = p->next;
@@ -85,10 +78,9 @@ Status LL_ListInsert(LinkList list, unsigned int i, elemType elem){
     return OK;
 }
 
-// ok
-Status LL_ListDelete(LinkList list, unsigned int i, elemType* elem){
+Status ListDelete(LinkList* list, unsigned int i, elemType* elem){
     LinkList p,q;
-    p = list;
+    p = *list;
     unsigned int j = 1;
     while(p->next && j < i){
         p = p->next;
@@ -102,10 +94,11 @@ Status LL_ListDelete(LinkList list, unsigned int i, elemType* elem){
     p->next = q->next;
     *elem = q->data;
     free(q);
+    q = NULL;
     return OK;
 }
 
-unsigned int LL_ListLength(LinkList list){
+unsigned int ListLength(LinkList list){
     LinkList p;
     unsigned int j = 0;
     p = list->next;
@@ -116,10 +109,14 @@ unsigned int LL_ListLength(LinkList list){
     return j;
 }
 
-unsigned int LL_LocateElem(LinkList list, elemType elem){
+unsigned int LocateElem(LinkList list, elemType elem){
     LinkList p;
     unsigned int j = 1;
     p = list->next;
+    if( !p ){
+        printf("list is empty. \n");
+        return ERROR;
+    }
     while (p && p->data != elem){
         p = p->next;
         ++j;
@@ -131,27 +128,26 @@ unsigned int LL_LocateElem(LinkList list, elemType elem){
     return j;
 }
 
-//ok
-void LL_CreateListHead(LinkList list, unsigned int num){
+void CreateListHead(LinkList* list, unsigned int num){
     LinkList p;
     unsigned int i;
     srand((unsigned int)time(0));
-    list = (LinkList)malloc(sizeof(Node));
-    list->next = NULL;
+    *list = (LinkList)malloc(sizeof(Node));
+    (*list)->next = NULL;
     for (i = 0; i < num; ++i){
         p = (LinkList)malloc(sizeof(Node));
-        p->next = list->next;
+        p->next = (*list)->next;
         p->data = (unsigned int) rand()%10 + 1;
-        list->next = p;
+        (*list)->next = p;
     }
 }
-//ok
-void LL_CreateListTail(LinkList list, unsigned int num){
+
+void CreateListTail(LinkList* list, unsigned int num){
     LinkList p, q;
     unsigned int i;
     srand((unsigned int)time(0));
-    list = (LinkList)malloc(sizeof(Node));
-    q = list;
+    *list = (LinkList)malloc(sizeof(Node));
+    q = *list;
     for (i = 0; i < num; ++i){
         p = (LinkList)malloc(sizeof(Node));
         p->data = (unsigned int) rand()%10 + 1;
