@@ -16,12 +16,6 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    LinkStack stack;
-    InitStack(&stack);
-    Push(&stack, 10);
-    Push(&stack, 10);
-    Push(&stack, 10);
-    ClearStack(&stack);
     printf("Hello, World!\n");
     printf("done\n");
     return 0;

@@ -45,10 +45,8 @@ Status InitStack(LinkStack* stack){
 }
 
 Status DestoryStack(LinkStack* stack){
-    // from what i understand, destory means free all the allocated
-    // memory. and clear means top point to NULL, which means the allocated
-    // memory hasn't been freed?(assign to some other varibles?)
-    // I got confused about the aim to have "clear", so I perfer to let them same.
+    // for the LinkStack, destory and clear means the same.
+    // cause the top pointer is the head pointer
     return ClearStack(stack);
 }
 
