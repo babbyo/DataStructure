@@ -156,3 +156,14 @@ void CreateListTail(LinkList* list, unsigned int num){
     }
     q->next = NULL;
 }
+
+void ListTraverse(LinkList list){
+    LinkList p = list->next;
+    if(ListEmpty(list))
+        printf("LinkList is empty");
+    while(!p){
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
+}

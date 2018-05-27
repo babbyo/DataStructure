@@ -66,3 +66,15 @@ unsigned int SLL_ListLength(StaticLinkList list){
     }
     return j;
 }
+
+void SLL_ListTraverse(StaticLinkList list){
+    unsigned int k = list[MAXSIZE - 1].cur;
+    if (k == 0){
+        printf("list is empty");
+    }
+    while(k != 0){
+        printf("%d ", list[k].data);
+        k = list[k].cur;
+    }
+    printf("\n");
+}

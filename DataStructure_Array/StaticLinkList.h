@@ -25,5 +25,6 @@ Status SLL_ListInsert(StaticLinkList list, unsigned int i, elemType elem);
 Status SLL_ListDelete(StaticLinkList list, unsigned int i);
 void Free_SLL(StaticLinkList list, unsigned int k);
 unsigned int SLL_ListLength(StaticLinkList space);
+void SLL_ListTraverse(StaticLinkList list);
 
 #endif /* StaticLinkList_h */

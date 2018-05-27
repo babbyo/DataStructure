@@ -11,6 +11,7 @@
 		591EF00F2093F23100183242 /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 591EF00E2093F23100183242 /* LinkList.c */; };
 		593416EC20972E6800B59AFB /* StaticLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 593416EB20972E6800B59AFB /* StaticLinkList.c */; };
 		593416EF209750D600B59AFB /* LinkStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 593416EE209750D600B59AFB /* LinkStack.c */; };
+		5973A51420A1F63D00FD6E4B /* ArrayStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 5973A51320A1F63D00FD6E4B /* ArrayStack.c */; };
 		59D85FBD209FBACA00107488 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 59D85FBC209FBACA00107488 /* ArrayList.c */; };
 		59F283BB209A0CF200AEBFCC /* LinkQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 59F283BA209A0CF200AEBFCC /* LinkQueue.c */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,8 @@
 		593416EB20972E6800B59AFB /* StaticLinkList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StaticLinkList.c; sourceTree = "<group>"; };
 		593416ED209750D600B59AFB /* LinkStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkStack.h; sourceTree = "<group>"; };
 		593416EE209750D600B59AFB /* LinkStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkStack.c; sourceTree = "<group>"; };
+		5973A51220A1F63D00FD6E4B /* ArrayStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayStack.h; sourceTree = "<group>"; };
+		5973A51320A1F63D00FD6E4B /* ArrayStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayStack.c; sourceTree = "<group>"; };
 		5985EAB22097E11100B5B986 /* DataStructureUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructureUtil.h; sourceTree = "<group>"; };
 		59D85FBB209FBACA00107488 /* ArrayList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
 		59D85FBC209FBACA00107488 /* ArrayList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayList.c; sourceTree = "<group>"; };
@@ -74,16 +77,14 @@
 		591EF0052093ED5C00183242 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				591EF0062093ED5C00183242 /* main.c */,
+				5985EAB22097E11100B5B986 /* DataStructureUtil.h */,
 				59F283B9209A0CF200AEBFCC /* LinkQueue.h */,
 				59F283BA209A0CF200AEBFCC /* LinkQueue.c */,
-				591EF0062093ED5C00183242 /* main.c */,
 				591EF00D2093F21600183242 /* LinkList.h */,
-				5985EAB22097E11100B5B986 /* DataStructureUtil.h */,
 				591EF00E2093F23100183242 /* LinkList.c */,
-				593416EA20972E6800B59AFB /* StaticLinkList.h */,
 				593416ED209750D600B59AFB /* LinkStack.h */,
 				593416EE209750D600B59AFB /* LinkStack.c */,
-				593416EB20972E6800B59AFB /* StaticLinkList.c */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -93,6 +94,10 @@
 			children = (
 				59D85FBB209FBACA00107488 /* ArrayList.h */,
 				59D85FBC209FBACA00107488 /* ArrayList.c */,
+				5973A51220A1F63D00FD6E4B /* ArrayStack.h */,
+				5973A51320A1F63D00FD6E4B /* ArrayStack.c */,
+				593416EA20972E6800B59AFB /* StaticLinkList.h */,
+				593416EB20972E6800B59AFB /* StaticLinkList.c */,
 			);
 			path = DataStructure_Array;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				59D85FBD209FBACA00107488 /* ArrayList.c in Sources */,
 				593416EF209750D600B59AFB /* LinkStack.c in Sources */,
 				591EF00F2093F23100183242 /* LinkList.c in Sources */,
+				5973A51420A1F63D00FD6E4B /* ArrayStack.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

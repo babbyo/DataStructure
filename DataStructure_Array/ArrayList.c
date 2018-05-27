@@ -82,3 +82,29 @@ Status AL_ListDelete(ArrayList* list, unsigned int index, elemType* elem){
 unsigned int AL_ListLength(ArrayList list){
     return list.length;
 }
+
+/*
+ *  insert list2 elements to list 1
+ *  Assume list1 have enough space
+ */
+void unionL(ArrayList* list1, ArrayList list2){
+    unsigned int list1_length, list2_length, i;
+    elemType elem;
+    list1_length = AL_ListLength(*list1);
+    list2_length = AL_ListLength(list2);
+    for (i = 1; i <= list2_length; i++){
+        AL_GetElem(list2,i,&elem);
+        if (!AL_LocateElem(*list1,elem))
+            AL_ListInsert(list1, ++list1_length, elem);
+    }
+}
+/*
+ * print the list element by element
+ */
+Status AL_ListTraverse(ArrayList list){
+    for (unsigned int i = 0; i < list.length; ++i){
+        printf("%d ", list.data[i]);
+    }
+    printf("\n");
+    return OK;
+}

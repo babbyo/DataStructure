@@ -76,4 +76,12 @@ Status GetTop(LinkStack* stack, elemType elem){
 unsigned int StackLength(LinkStack stack){
     return stack.count;
 }
+void StackTraverse(LinkStack stack){
+    LinkStackPtr p = stack.top;
+    while(p){
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
+}
 

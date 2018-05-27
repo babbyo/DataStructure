@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include "DataStructureUtil.h"
-#define MAX_SIZE 20
 
 typedef struct {
     elemType data[MAX_SIZE];
@@ -26,6 +25,8 @@ unsigned int AL_LocateElem(ArrayList list, elemType elem);//一般返回element�
 Status AL_ListInsert(ArrayList* list, unsigned int index, elemType elem);
 Status AL_ListDelete(ArrayList* list, unsigned int index, elemType* elem);
 unsigned int AL_ListLength(ArrayList list);
+void unionL(ArrayList* list1, ArrayList list2);
+Status AL_ListTraverse(ArrayList list);
 
 
 

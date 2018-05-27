@@ -25,6 +25,7 @@ unsigned int LocateElem(LinkList list, elemType elem);//一般返回element的�
 Status ListInsert(LinkList* list, unsigned int index, elemType elem);
 Status ListDelete(LinkList* list, unsigned int index, elemType* elem);
 unsigned int ListLength(LinkList list);
+void ListTraverse(LinkList list);
 //
 void CreateListHead(LinkList* list, unsigned int num);
 void CreateListTail(LinkList* list, unsigned int num);

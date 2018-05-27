@@ -30,5 +30,6 @@ Status Push(LinkStack* stack, elemType elem);
 Status Pop(LinkStack* stack, elemType* elem);
 Status GetTop(LinkStack* stack, elemType elem);
 unsigned int StackLength(LinkStack stack);
+void StackTraverse(LinkStack stack);
 
 #endif /* LinkStack_h */
