@@ -96,3 +96,16 @@ unsigned int QueueLength(LinkQueue queue){
     }
     return i;
 }
+
+void QueueTraverse(LinkQueue queue){
+    QueuePtr p;
+    p = queue.fronter->next;
+    if(QueueEmpty(queue))
+        printf("Queue is empty");
+    while(p)
+    {
+        printf("%d ",p->data);
+        p=p->next;
+    }
+    printf("\n");
+}

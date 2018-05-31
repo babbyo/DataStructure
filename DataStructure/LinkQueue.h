@@ -28,6 +28,7 @@ Status GetHead(LinkQueue queue, elemType* elem);
 Status EnQueue(LinkQueue* queue, elemType elem);
 Status DeQueue(LinkQueue* queue, elemType* elem);
 unsigned int QueueLength(LinkQueue queue);
+void QueueTraverse(LinkQueue queue);
 
 
 #endif /* LinkQueue_h */

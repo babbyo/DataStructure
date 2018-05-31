@@ -13,6 +13,7 @@
 		593416EF209750D600B59AFB /* LinkStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 593416EE209750D600B59AFB /* LinkStack.c */; };
 		5973A51420A1F63D00FD6E4B /* ArrayStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 5973A51320A1F63D00FD6E4B /* ArrayStack.c */; };
 		59D85FBD209FBACA00107488 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 59D85FBC209FBACA00107488 /* ArrayList.c */; };
+		59DF3EF920BB33F40076ED62 /* ArrayQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 59DF3EF820BB33F40076ED62 /* ArrayQueue.c */; };
 		59F283BB209A0CF200AEBFCC /* LinkQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 59F283BA209A0CF200AEBFCC /* LinkQueue.c */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		5985EAB22097E11100B5B986 /* DataStructureUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructureUtil.h; sourceTree = "<group>"; };
 		59D85FBB209FBACA00107488 /* ArrayList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
 		59D85FBC209FBACA00107488 /* ArrayList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayList.c; sourceTree = "<group>"; };
+		59DF3EF720BB33F40076ED62 /* ArrayQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayQueue.h; sourceTree = "<group>"; };
+		59DF3EF820BB33F40076ED62 /* ArrayQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayQueue.c; sourceTree = "<group>"; };
 		59F283B9209A0CF200AEBFCC /* LinkQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkQueue.h; sourceTree = "<group>"; };
 		59F283BA209A0CF200AEBFCC /* LinkQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkQueue.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +101,8 @@
 				5973A51320A1F63D00FD6E4B /* ArrayStack.c */,
 				593416EA20972E6800B59AFB /* StaticLinkList.h */,
 				593416EB20972E6800B59AFB /* StaticLinkList.c */,
+				59DF3EF720BB33F40076ED62 /* ArrayQueue.h */,
+				59DF3EF820BB33F40076ED62 /* ArrayQueue.c */,
 			);
 			path = DataStructure_Array;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F283BB209A0CF200AEBFCC /* LinkQueue.c in Sources */,
+				59DF3EF920BB33F40076ED62 /* ArrayQueue.c in Sources */,
 				593416EC20972E6800B59AFB /* StaticLinkList.c in Sources */,
 				591EF0072093ED5C00183242 /* main.c in Sources */,
 				59D85FBD209FBACA00107488 /* ArrayList.c in Sources */,
